@@ -4,7 +4,7 @@ MODULE: siren.ino
 
 AUTHOR: Sapunov Vladimir, warnash.com
 
-DESCRIPTION: Makes a police car sound.
+DESCRIPTION: Makes an asynchronous police car sound.
 
 REMARKS: BEEP_PIN and BEEP_PORT are defined in beep.c.
 
@@ -25,21 +25,15 @@ extern "C" {
 }
 
 
-/*
-=============	WARNING!
-=============
-*/
-
-static char		sirenMode = 0;
-
 void setup ()
 {
 
 	BEEP_init ();
 	Sound_Greet ();
-//Sound_Siren ();
-//Sound_Klaxon ();
-//TIMER_set_frequency (2, 100);
+
+	//Sound_Siren ();
+	//Sound_Klaxon ();
+	//TIMER_set_frequency (2, 100);
 }
 
 void loop ()
